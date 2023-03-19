@@ -10,7 +10,7 @@ requirements = [
     "torch",
     "torchvision",
     "pyntcloud",
-    "numpy==1.21",
+    "numpy==1.22",
     "matplotlib",
     "scikit-image",
     "pandas",
