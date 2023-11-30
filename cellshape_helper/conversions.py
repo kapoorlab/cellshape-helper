@@ -97,7 +97,7 @@ def label_tif_to_pc_directory(path: str , save_dir: str, num_points: int, min_si
                                     save_mesh_file = os.path.join(mesh_save_dir, mesh_file) + ".off"
                                     save_point_cloud_file = os.path.join(point_cloud_save_dir, mesh_file) + ".ply"
                                     mesh_obj.export(save_mesh_file) 
-                                    data = read_off(os.path.join(mesh_save_dir, save_mesh_file))
+                                    data = read_off(save_mesh_file)
                                     points = sample_points(data=data, num=num_points).numpy()
                                     cloud = PyntCloud(pd.DataFrame(data=points, columns=["x", "y", "z"]))
                                     cloud.to_file(save_point_cloud_file)
